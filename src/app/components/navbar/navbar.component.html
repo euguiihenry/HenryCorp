@@ -1,0 +1,13 @@
+<div class="flex flex-row gap-[1.5rem] justify-center items-start">
+    <ng-container *ngFor="let link of getFilteredLinks()">
+        <div class="flex flex-col gap-[0.2rem] justify-center items-start">
+            <a class="font-bold" [routerLink]="[link.path]">{{ link.label }}
+                <div [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" class="flex-row justify-center items-center w-full link-inactive pt-[0.2rem]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="4" viewBox="0 0 13 2" fill="none" class="rounded-xs">
+                        <path d="M1.5 1H11.5" stroke="#F5F9FF" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </ng-container>
+</div>
